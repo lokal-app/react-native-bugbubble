@@ -1,6 +1,6 @@
 {
   "name": "@lokal-dev/react-native-bugbubble",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native in-app debugging tool - Monitor network requests, WebSocket events, console logs, and analytics in real-time. Zero configuration, TypeScript support, draggable UI.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
