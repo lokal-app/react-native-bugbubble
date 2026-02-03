@@ -200,7 +200,18 @@ export class NetworkInterceptor {
   ): typeof global.fetch {
     return async (input: RequestInfo | URL, init?: RequestInit) => {
       const startTime = performance.now();
-      const url = typeof input === 'string' ? input : input.toString();
+      const url =
+        typeof input === 'string'
+          ? input
+          : typeof input === 'object' && input !== null
+          ? // Prefer Request/URL fields when available; fall back to string conversion.
+            (input as Request).url ||
+            (input as URL).href ||
+            (typeof (input as { toString?: () => string }).toString ===
+            'function'
+              ? (input as { toString: () => string }).toString()
+              : String(input))
+          : String(input);
       const method = (init?.method || 'GET').toUpperCase();
 
       try {
