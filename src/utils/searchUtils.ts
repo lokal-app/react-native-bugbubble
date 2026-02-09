@@ -32,7 +32,11 @@ export const filterLogsBySearch = (
  */
 const matchesSearchQuery = (log: LogEntry, query: string): boolean => {
   // Search in message
-  if (log.message && typeof log.message === 'string' && log.message.toLowerCase().includes(query)) {
+  if (
+    log.message &&
+    typeof log.message === 'string' &&
+    log.message.toLowerCase().includes(query)
+  ) {
     return true;
   }
 
