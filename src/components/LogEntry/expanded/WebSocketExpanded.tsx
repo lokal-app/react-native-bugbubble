@@ -25,9 +25,10 @@ const getEventColor = (event: string): string => {
 
 export const WebSocketExpanded = memo<WebSocketExpandedProps>(({ log }) => {
   const eventColor = getEventColor(log.event || 'unknown');
-  const eventText = log.event && typeof log.event === 'string' 
-    ? log.event.toUpperCase() 
-    : 'UNKNOWN';
+  const eventText =
+    log.event && typeof log.event === 'string'
+      ? log.event.toUpperCase()
+      : 'UNKNOWN';
 
   return (
     <View style={styles.container}>

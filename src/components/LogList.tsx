@@ -40,8 +40,10 @@ export const LogList: React.FC<LogListProps> = React.memo(({ type }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>
-          {type && typeof type === 'string' 
-            ? `${type.charAt(0).toUpperCase()}${type.slice(1)} Logs (${logs.length})`
+          {type && typeof type === 'string'
+            ? `${type.charAt(0).toUpperCase()}${type.slice(1)} Logs (${
+                logs.length
+              })`
             : `Logs (${logs.length})`}
         </Text>
         <TouchableOpacity

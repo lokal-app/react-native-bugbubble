@@ -188,8 +188,7 @@ export function ExampleScreen() {
         <View style={styles.infoBanner}>
           <Text style={styles.infoBannerText}>
             <Text style={styles.infoBannerBold}>Automatic Interception:</Text>{' '}
-            Just add the{' '}
-            <Text style={styles.infoBannerCode}>BugBubble</Text>{' '}
+            Just add the <Text style={styles.infoBannerCode}>BugBubble</Text>{' '}
             component, and everything should automatically start working for
             you. Your console logs, network requests, and WebSocket events will
             be automatically intercepted and logged. But if you still need to
@@ -293,9 +292,7 @@ export function ExampleScreen() {
           <Text style={styles.sectionTitle}>📊 Analytics Events</Text>
           <Text style={styles.sectionDescription}>
             Analytics events must be logged explicitly using{' '}
-            <Text style={styles.codeText}>
-              BugBubbleLogger.logAnalytics()
-            </Text>
+            <Text style={styles.codeText}>BugBubbleLogger.logAnalytics()</Text>
           </Text>
           <TouchableOpacity
             style={styles.button}

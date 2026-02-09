@@ -41,7 +41,10 @@ export const FloatingButton: React.FC<FloatingButtonProps> = ({ style }) => {
         right: config.floatingButtonPosition.right ?? 20,
       });
     }
-  }, [config?.floatingButtonPosition?.top, config?.floatingButtonPosition?.right]);
+  }, [
+    config?.floatingButtonPosition?.top,
+    config?.floatingButtonPosition?.right,
+  ]);
 
   const panResponder = useRef(
     PanResponder.create({
